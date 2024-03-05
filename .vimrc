@@ -7,6 +7,7 @@ set tabstop=2
 set softtabstop=2
 set cursorline
 set colorcolumn=80
+set relativenumber
 
 " Plug
 call plug#begin('~/.vim/plugged')
