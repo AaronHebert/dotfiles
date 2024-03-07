@@ -8,6 +8,7 @@ set softtabstop=2
 set cursorline
 set colorcolumn=80
 set relativenumber
+set paste
 
 " Plug
 call plug#begin('~/.vim/plugged')
