@@ -12,7 +12,7 @@ set relativenumber
 " Plug
 call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdTree'
-  Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'chriskempson/base16-vim'
   Plug 'airblade/vim-gitgutter'
   Plug 'morhetz/gruvbox'
@@ -33,14 +33,9 @@ nnoremap <leader>u :GundoToggle<CR>
 
 " Global Remaps
 map <C-n> :NERDTreeToggle<CR>
+map <C-p> :FZF<CR>
 
-" CtrlP Setup
-let g:ctrlp_match_window = 'bottom,order:ttb'
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-
-" Autogroups
+# Autogroups
 augroup configgroup
   autocmd!
   autocmd VimEnter * highlight clear SignColumn
