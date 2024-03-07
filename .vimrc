@@ -35,7 +35,7 @@ nnoremap <leader>u :GundoToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
 map <C-p> :FZF<CR>
 
-# Autogroups
+" Autogroups
 augroup configgroup
   autocmd!
   autocmd VimEnter * highlight clear SignColumn
