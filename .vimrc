@@ -9,6 +9,7 @@ set cursorline
 set colorcolumn=80
 set relativenumber
 set paste
+set timeoutlen=0
 
 " Plug
 call plug#begin('~/.vim/plugged')
@@ -24,17 +25,16 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 " Leader
-let mapleader = ","
+let mapleader = "\\"
 
 " Insert Remaps
 inoremap jk <esc>
 
-" Normal Remaps
+" Remaps
 nnoremap <leader>u :GundoToggle<CR>
-
-" Global Remaps
-map <C-n> :NERDTreeToggle<CR>
-map <C-p> :FZF<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>e :Explore<CR>
+nnoremap <leader>p :FZF<CR>
 
 " Autogroups
 augroup configgroup
