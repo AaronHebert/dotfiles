@@ -4,11 +4,12 @@ fpath+=("$(brew --prefix)/share/zsh/site-functions")
 ### Basic Exports
 export COMPOSE_DOCKER_CLI_BUILD=0
 export DOCKER_BUILDKIT=0
-export EDITOR="vim"
+export EDITOR="nvim"
 export HOMEBREW_ANALYTICS_DEBUG=1
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 ###
+
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 
 
 ### Load Sensitive ENVs
@@ -80,4 +81,5 @@ alias ssh=color-ssh
 ### Basic Aliases
 alias l="eza -la"
 alias be="bundle_v exec"
+alias vim="nvim"
 ###
