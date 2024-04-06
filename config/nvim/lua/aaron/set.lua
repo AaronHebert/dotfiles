@@ -21,3 +21,7 @@ opt.undofile = true
 opt.wrap = false
 opt.scrolloff = 8
 opt.updatetime = 50
+opt.ttimeoutlen = 0
+
+vim.cmd("let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]")
+vim.g.vimwiki_markdown_link_ext = 1

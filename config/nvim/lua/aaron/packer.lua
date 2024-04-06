@@ -59,7 +59,7 @@ return require('packer').startup(function(use)
   use("eandrju/cellular-automaton.nvim")
   use("laytan/cloak.nvim")
   use({"nvim-neo-tree/neo-tree.nvim",
-    requires = { 
+    requires = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
@@ -72,6 +72,7 @@ return require('packer').startup(function(use)
     end
   })
   use("itchyny/lightline.vim")
+  use({"vimwiki/vimwiki"})
   use({"joshdick/onedark.vim",
     as = 'onedark',
     config = function()
