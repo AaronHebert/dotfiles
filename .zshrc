@@ -81,5 +81,6 @@ alias ssh=color-ssh
 ### Basic Aliases
 alias l="eza -la"
 alias be="bundle_v exec"
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias vim="nvim"
 ###
