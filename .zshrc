@@ -5,7 +5,7 @@ fpath+=("$(brew --prefix)/share/zsh/site-functions")
 export COMPOSE_DOCKER_CLI_BUILD=0
 export DOCKER_BUILDKIT=0
 export EDITOR="nvim"
-export HOMEBREW_ANALYTICS_DEBUG=1
+export HOMEBREW_NO_ANALYTICS=1
 export NVM_DIR="$HOME/.nvm"
 ###
 
