@@ -5,29 +5,26 @@ fpath+=("$(brew --prefix)/share/zsh/site-functions")
 export COMPOSE_DOCKER_CLI_BUILD=0
 export DOCKER_BUILDKIT=0
 export EDITOR="nvim"
-export HOMEBREW_NO_ANALYTICS=1
 export NVM_DIR="$HOME/.nvm"
-###
+
+### Telemetry
+export HOMEBREW_NO_ANALYTICS=1
+export APOLLO_TELEMETRY_DISABLED=true
 
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-
 
 ### Load Sensitive ENVs
 if [ -f $HOME/.sensitive ]; then
   source $HOME/.sensitive_vars
 fi
 
-
 ### ZSH
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME=""
-
-plugins=(git)
-
 source $ZSH/oh-my-zsh.sh
 eval "$(rbenv init - zsh)"
-###
 
+### Theme support
+ZSH_THEME=""
 autoload -U promptinit; promptinit
 prompt pure
 
@@ -76,11 +73,16 @@ color-ssh() {
 
 compdef _ssh color-ssh=ssh
 alias ssh=color-ssh
-###
 
 ### Basic Aliases
-alias l="eza -la"
+alias l="eza -abl --group-directories-first"
 alias be="bundle_v exec"
+alias dc="docker compose"
+alias ds='docker stats $(docker ps --format={{.Names}})'
+alias iclean="docker container prune && docker image prune"
+alias idangle='docker rmi $(docker images -f "dangling=true" -q)'
+alias lzd='lazydocker'
+alias kc="kubectl"
+alias startssh='eval `ssh-agent -s`'
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias vim="nvim"
-###
