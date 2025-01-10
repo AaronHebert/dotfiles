@@ -21,7 +21,7 @@ opt.undofile = true
 opt.wrap = false
 opt.scrolloff = 8
 opt.updatetime = 50
-opt.ttimeoutlen = 0
+opt.ttimeoutlen = 1000
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
