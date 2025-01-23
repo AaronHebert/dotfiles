@@ -9,6 +9,8 @@ export NVM_DIR="$HOME/.nvm"
 
 ### Telemetry
 export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_BAT=1
 export APOLLO_TELEMETRY_DISABLED=true
 
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
@@ -79,6 +81,7 @@ alias l="eza -abl --group-directories-first"
 alias be="bundle_v exec"
 alias dc="docker compose"
 alias ds='docker stats $(docker ps --format={{.Names}})'
+alias fuck='sudo dscacheutil -flushcache; sudo killall -9 mDNSResponder; sudo killall -9 mDNSResponderHelper'
 alias iclean="docker container prune && docker image prune"
 alias idangle='docker rmi $(docker images -f "dangling=true" -q)'
 alias lzd='lazydocker'
