@@ -8,6 +8,7 @@ export EDITOR="nvim"
 export NVM_DIR="$HOME/.nvm"
 
 ### Telemetry
+export HOMEBREW_CASK_OPTS="--no-quarantine" # macOS gets worse every release
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_BAT=1
