@@ -1,8 +1,9 @@
 export PATH="/opt/homebrew/Cellar/git/2.37.0/bin:/Users/ahebert/work/infrastructure/bin:/opt/homebrew/opt/python@3.10/libexec/bin:$PATH"
-fpath+=("$(brew --prefix)/share/zsh/site-functions")
+# fpath+=("$(brew --prefix)/share/zsh/site-functions") # is this needed?
 
 ### Basic Exports
 export COMPOSE_DOCKER_CLI_BUILD=0
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
 export DOCKER_BUILDKIT=0
 export EDITOR="nvim"
 export NVM_DIR="$HOME/.nvm"
