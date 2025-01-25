@@ -7,3 +7,6 @@ ln -s .hushlogin ~/.hushlogin
 ln -s .irbrc ~/.irbrc
 ln -s .tmux.conf ~/.tmux.conf
 ln -s .zshrc ~/.zshrc.base
+
+# create secrets dir
+mkdir ~/.secrets

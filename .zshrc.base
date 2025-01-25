@@ -1,7 +1,21 @@
-export PATH="/opt/homebrew/Cellar/git/2.37.0/bin:/Users/ahebert/work/infrastructure/bin:/opt/homebrew/opt/python@3.10/libexec/bin:$PATH"
-# fpath+=("$(brew --prefix)/share/zsh/site-functions") # is this needed?
+### My "base" config with a common setup appropriate for both home & work.
+### This is to be sourced by ~/.zshrc, typically near the top.
 
-### Basic Exports
+### PATH
+export PATH="/opt/homebrew/Cellar/git/2.37.0/bin"
+export PATH="$PATH:/Users/ahebert/work/infrastructure/bin"
+export PATH="$PATH:/opt/homebrew/opt/python@3.10/libexec/bin"
+
+## Sensitive ENVs (keys, passwords, &c.), source all *.env from ~/.secrets
+###
+### Load this early to avoid overwriting values defined in the main .zshrc
+for file in ~/.secrets/*.env; do
+  if [[ -f "$file" ]]; then
+    source "$file"
+  fi
+done
+
+### Exports
 export COMPOSE_DOCKER_CLI_BUILD=0
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
 export DOCKER_BUILDKIT=0
@@ -9,18 +23,15 @@ export EDITOR="nvim"
 export NVM_DIR="$HOME/.nvm"
 
 ### Telemetry
-export HOMEBREW_CASK_OPTS="--no-quarantine" # macOS gets worse every release
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_BAT=1
 export APOLLO_TELEMETRY_DISABLED=true
 
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+### Fix macOS, because it gets worse every release
+export HOMEBREW_CASK_OPTS="--no-quarantine"
 
-### Load Sensitive ENVs
-if [ -f $HOME/.sensitive ]; then
-  source $HOME/.sensitive_vars
-fi
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 
 ### ZSH
 ZSH=$HOME/.oh-my-zsh
@@ -48,35 +59,6 @@ function bundle_v() {
   bundler _"${BUNDLEVERSION}"_ "$@"
   echo "---Ran bundler with version ${BUNDLEVERSION}---"
 }
-
-# iTerm2 window/tab color commands
-#   Requires iTerm2 >= Build 1.0.0.20110804
-#   http://code.google.com/p/iterm2/wiki/ProprietaryEscapeCodes
-tab-color() {
-    echo -ne "\033]6;1;bg;red;brightness;$1\a"
-    echo -ne "\033]6;1;bg;green;brightness;$2\a"
-    echo -ne "\033]6;1;bg;blue;brightness;$3\a"
-}
-tab-reset() {
-    echo -ne "\033]6;1;bg;*;default\a"
-}
-
-# Change the color of the tab when using SSH
-# reset the color after the connection closes
-color-ssh() {
-  if [[ -n "$ITERM_SESSION_ID" ]]; then
-    trap "tab-reset" INT EXIT
-    if [[ "$*" =~ "production|ec2-.*compute-1" ]]; then
-        tab-color 255 0 0
-    else
-        tab-color 0 255 0
-    fi
-  fi
-  ssh $*
-}
-
-compdef _ssh color-ssh=ssh
-alias ssh=color-ssh
 
 ### Basic Aliases
 alias l="eza -abl --group-directories-first"
