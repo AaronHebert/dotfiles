@@ -62,6 +62,7 @@ alias iclean="docker container prune && docker image prune"
 alias idangle='docker rmi $(docker images -f "dangling=true" -q)'
 alias lzd='lazydocker'
 alias kc="kubectl"
+alias rm="rm -I" # you never know…
 alias startssh='eval `ssh-agent -s`'
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias vim="nvim"
