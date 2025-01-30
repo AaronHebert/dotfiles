@@ -2,4 +2,5 @@ iTerm2
 * Change Profiles –> Keys
 	* Left Option Key, normal, apps can change this
 	* Right option key, Esc+
+	* Treat option as alt
 	
