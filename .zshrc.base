@@ -20,7 +20,6 @@ export COMPOSE_DOCKER_CLI_BUILD=0
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
 export DOCKER_BUILDKIT=0
 export EDITOR="nvim"
-export NVM_DIR="$HOME/.nvm"
 
 ### Telemetry
 export HOMEBREW_NO_ANALYTICS=1
@@ -40,6 +39,10 @@ eval "$(rbenv init - zsh)"
 ZSH_THEME=""
 autoload -U promptinit; promptinit
 prompt pure
+
+### NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 ### Ensures we run the bundler version as defined in Gemfile.lock
 function bundle_v() {
