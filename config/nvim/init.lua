@@ -1,3 +1,7 @@
+vim.cmd("set nocompatible")
+vim.cmd(":filetype plugin on")
+vim.cmd("syntax on")
+
 local opt = vim.opt
 
 opt.background = "dark"
