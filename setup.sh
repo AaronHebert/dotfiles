@@ -8,5 +8,5 @@ ln -s .irbrc ~/.irbrc
 ln -s .tmux.conf ~/.tmux.conf
 ln -s .zshrc.base ~/.zshrc.base
 
-# create secrets dir
 mkdir ~/.secrets
+mkdir ~/.vimwiki
