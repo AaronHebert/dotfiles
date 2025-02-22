@@ -9,7 +9,7 @@ export PATH="$PATH:/opt/homebrew/bin/"
 ## Sensitive ENVs (keys, passwords, &c.), source all *.env from ~/.secrets
 ###
 ### Load this early to avoid overwriting values defined in the main .zshrc
-for file in ~/.secrets/*.env; do
+for file in ~/.secrets/*.env(DN); do
   if [[ -f "$file" ]]; then
     source "$file"
   fi
