@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ### symlinks
-ls -s .fdignore ~/.fdignore
+ln -s .fdignore ~/.fdignore
 ln -s .gemrc ~/.gemrc
 ln -s .hushlogin ~/.hushlogin
 ln -s .irbrc ~/.irbrc
