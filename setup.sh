@@ -11,3 +11,5 @@ ln -s .zshrc.base ~/.zshrc.base
 
 mkdir ~/.secrets
 mkdir ~/.vimwiki
+
+touch ~/.hushlogin
