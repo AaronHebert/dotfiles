@@ -53,7 +53,7 @@ function bundle_v() {
 }
 
 ### Basic Aliases
-alias l="eza -abl --group-directories-first"
+alias l="eza -ablh --group-directories-first --no-git"
 alias be="bundle_v exec"
 alias dc="docker compose"
 alias ds='docker stats $(docker ps --format={{.Names}})'
