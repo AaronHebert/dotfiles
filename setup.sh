@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 ### symlinks
-ln -s .fdignore ~/.fdignore
-ln -s .gemrc ~/.gemrc
-ln -s .gitconfig ~/.gitconfig
-ln -s .hushlogin ~/.hushlogin
-ln -s .irbrc ~/.irbrc
-ln -s .tmux.conf ~/.tmux.conf
-ln -s .zshrc.base ~/.zshrc.base
+ln -sf .fdignore ~/.fdignore
+ln -sf .gemrc ~/.gemrc
+ln -sf .gitconfig ~/.gitconfig
+ln -sf .hushlogin ~/.hushlogin
+ln -sf .irbrc ~/.irbrc
+ln -sf .tmux.conf ~/.tmux.conf
+ln -sf .zshrc.base ~/.zshrc.base
 
-mkdir ~/.secrets
+mkdir -p ~/.secrets/rails_credentials
 mkdir ~/.vimwiki
 
 touch ~/.hushlogin
