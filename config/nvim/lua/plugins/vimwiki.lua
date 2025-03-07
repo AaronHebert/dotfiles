@@ -9,19 +9,14 @@ return {
       {
         path = "~/vimwiki/ted/",
         syntax = "markdown",
-        ext = "md",
+        ext = "markdown",
       },
       {
         path = "~/vimwiki/personal/",
         syntax = "markdown",
-        ext = "md",
+        ext = "markdown",
       },
     }
   
-	vim.g.vimwiki_ext2syntax = {
-		[".md"] = "markdown",
-		[".markdown"] = "markdown",
-		[".mdown"] = "markdown",
-	}
 	end,
 }

@@ -3,6 +3,9 @@ vim.cmd(":filetype plugin on")
 vim.cmd("syntax on")
 
 local opt = vim.opt
+local augroup = vim.api.nvim_create_augroup
+local autocmd = vim.api.nvim_create_autocmd
+local reset_group = augroup('reset_group', {clear = true})
 
 opt.background = "dark"
 opt.termguicolors = true
@@ -52,6 +55,12 @@ vim.g.maplocalleader = " "
 -- Stop netrw because neo-tree refuses to do so.
 vim.g.loaded_netrwPlugin = 1
 vim.g.loaded_netrw = 1
+
+-- Set syntax to markdown for .markdown files
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+  pattern = {"*.markdown", "*.md"},
+  command = "set syntax=markdown",
+})
 
 -- Setup lazy.nvim
 require("lazy").setup("plugins")
