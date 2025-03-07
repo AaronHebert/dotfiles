@@ -56,12 +56,6 @@ vim.g.maplocalleader = " "
 vim.g.loaded_netrwPlugin = 1
 vim.g.loaded_netrw = 1
 
--- Set syntax to markdown for .markdown files
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-  pattern = {"*.markdown", "*.md"},
-  command = "set syntax=markdown",
-})
-
 -- Setup lazy.nvim
 require("lazy").setup("plugins")
 
