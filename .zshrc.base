@@ -66,3 +66,4 @@ alias rm="rm -I" # you never know…
 alias startssh='eval `ssh-agent -s`'
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias vim="nvim"
+alias ww="vim -c VimwikiIndex"

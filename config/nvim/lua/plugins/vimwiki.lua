@@ -7,12 +7,12 @@ return {
 		vim.g.vimwiki_folding = ""
 		vim.g.vimwiki_list = {
       {
-        path = "~/vimwiki/personal/",
+        path = "~/vimwiki/ted/",
         syntax = "markdown",
         ext = "md",
       },
       {
-        path = "~/vimwiki/ted/",
+        path = "~/vimwiki/personal/",
         syntax = "markdown",
         ext = "md",
       },
