@@ -3,9 +3,6 @@ vim.cmd(":filetype plugin on")
 vim.cmd("syntax on")
 
 local opt = vim.opt
-local augroup = vim.api.nvim_create_augroup
-local autocmd = vim.api.nvim_create_autocmd
-local reset_group = augroup('reset_group', {clear = true})
 
 opt.background = "dark"
 opt.termguicolors = true

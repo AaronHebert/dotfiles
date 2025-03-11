@@ -1,6 +1,6 @@
 return {
   "vimwiki/vimwiki",
-  event = "BufEnter *.md",
+  event = "BufEnter *.markdown",
   keys = { "<leader>ww", "<leader>wt" },
 
 	init = function()
