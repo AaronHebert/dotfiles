@@ -27,6 +27,7 @@ opt.scrolloff = 8
 opt.updatetime = 50
 opt.ttimeoutlen = 0
 opt.fillchars = {eob = " "}
+opt.mouse = ""
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -52,6 +53,10 @@ vim.g.maplocalleader = " "
 -- Stop netrw because neo-tree refuses to do so.
 vim.g.loaded_netrwPlugin = 1
 vim.g.loaded_netrw = 1
+
+-- Previous buffer shortcut
+vim.keymap.set("n", "<leader>]", ":bp<CR>")
+vim.keymap.set("n", "<leader>[", ":bn<CR>")
 
 -- Setup lazy.nvim
 require("lazy").setup("plugins")
