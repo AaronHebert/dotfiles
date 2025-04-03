@@ -16,16 +16,19 @@ for file in ~/.secrets/*.env(DN); do
 done
 
 ### Add common ssh keys to agent
-#arr=("key1" "key2" "...")
-#if [[ $__SSH_KEYS_LOADED == "false" ]]; then
-#	for val in "${arr[@]}"; do
-#		ssh-add --apple-use-keychain ~/.ssh/"$val" || {
-#			echo "Failed to add ssh key: $val"
-#		}
-#	done
+#function addkeys() {
+#	arr=("key1" "key2" "...")
+#	if [[ $__SSH_KEYS_LOADED == "false" ]]; then
+#		for val in "${arr[@]}"; do
+#			ssh-add --apple-use-keychain ~/.ssh/"$val" || {
+#				echo "Failed to add ssh key: $val"
+#			}
+#		done
 #
-#	export __SSH_KEYS_LOADED="true"
-#fi
+#		echo "-– ssh keys loaded!"
+#		export __SSH_KEYS_LOADED="true"
+#	fi
+#}
 
 ### Exports
 export COMPOSE_DOCKER_CLI_BUILD=0
