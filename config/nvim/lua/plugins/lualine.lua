@@ -4,7 +4,10 @@ return {
     config = function()
       require('lualine').setup({
         options = {
-          theme = 'dracula'
+          theme = 'dracula',
+					ignore_focus = { 
+						'neo-tree' 
+					}
         }
       })
     end
