@@ -56,9 +56,10 @@
     "slogin",
     "telnet"
   ],
-  "Scrollback With Status Bar" : false,
+  "Allow Change Cursor Blink" : false,
   "Scrollback Lines" : 1000,
   "Scrollback in Alternate Screen" : false,
+  "Scrollback With Status Bar" : false,
   "Draw Powerline Glyphs" : false,
   "Flashing Bell" : false,
   "Cursor Guide Color" : {
@@ -135,6 +136,7 @@
     "Green Component" : 0.46265947818756104
   },
   "Window Type" : 0,
+  "Allow Title Reporting" : false,
   "Use Bright Bold" : true,
   "Cursor Text Color" : {
     "Red Component" : 0.10910084843635559,
@@ -151,6 +153,9 @@
     "Alpha Component" : 1,
     "Green Component" : 0.50962930917739868
   },
+  "Disable Smcup Rmcup" : false,
+  "Name" : "Default",
+  "Blinking Cursor" : false,
   "Ansi 1 Color" : {
     "Red Component" : 0.78823530673980713,
     "Color Space" : "Calibrated",
@@ -158,8 +163,6 @@
     "Alpha Component" : 1,
     "Green Component" : 0.29803922772407532
   },
-  "Name" : "Default",
-  "Blinking Cursor" : false,
   "Guid" : "5CE458AB-F859-4BF6-91FA-E4926EE0A101",
   "Badge Max Width" : 0.29999999999999999,
   "Match Background Color" : {
@@ -205,7 +208,7 @@
   "Blur" : true,
   "Normal Font" : "JetBrainsMonoNFM-Regular 14",
   "Vertical Spacing" : 1,
-  "Allow Alternate Mouse Scroll" : true,
+  "Allow Alternate Mouse Scroll" : false,
   "Ansi 7 Color" : {
     "Red Component" : 0.78819584846496582,
     "Color Space" : "Calibrated",
@@ -213,13 +216,14 @@
     "Alpha Component" : 1,
     "Green Component" : 0.77558910846710205
   },
+  "Drag to Scroll in Alternate Screen Mode Disabled" : false,
   "Command" : "",
   "Terminal Type" : "xterm-256color",
   "Horizontal Spacing" : 1,
   "Option Key Sends" : 0,
+  "Minimum Contrast" : 0,
   "Only The Default BG Color Uses Transparency" : false,
   "Blink Allowed" : false,
-  "Minimum Contrast" : 0,
   "Ansi 15 Color" : {
     "Red Component" : 0.78782689571380615,
     "Color Space" : "Calibrated",
@@ -227,6 +231,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.77491450309753418
   },
+  "Restrict Mouse Reporting to Alternate Screen Mode" : false,
   "Unicode Version" : 9,
   "Ansi 6 Color" : {
     "Red Component" : 0.19607843458652496,
@@ -257,8 +262,8 @@
   "Columns" : 80,
   "Unicode Normalization" : 0,
   "Visual Bell" : true,
-  "Custom Directory" : "No",
   "ASCII Ligatures" : false,
+  "Custom Directory" : "No",
   "Ansi 5 Color" : {
     "Red Component" : 0.81960785388946533,
     "Color Space" : "Calibrated",
