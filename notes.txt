@@ -3,4 +3,16 @@ iTerm2
 	* Left Option Key, normal, apps can change this
 	* Right option key, Esc+
 	* Treat option as alt
-	
+
+Remove Apple Intelligence Models
+	1. Disable Apple Intelligence in System Settings. 
+	2. Start up into Recovery Mode.
+	3. Open Terminal (Utilities menu, Terminal) 
+	4. Type: csrutil disable 
+	5. Shut down and start back up in Recovery Mode. 
+	6. Open Disk Utility. 
+	7. Right-click on 'Data' under 'Macintosh HD' and choose Mount. 
+	8. Quit Disk Utility and open Terminal again. 
+	9. Type: rm -rf /Volumes/Data/System/Library/AssetsV2/com_apple_MobileAsset_UAF_FM_GenerativeModels 
+	10. Type: csrutil enable 
+	11. Reboot 

@@ -28,6 +28,10 @@ opt.updatetime = 50
 opt.ttimeoutlen = 0
 opt.fillchars = {eob = " "}
 opt.mouse = ""
+opt.tabstop = 2
+opt.softtabstop = 0
+opt.smarttab = true
+opt.shiftwidth = 2
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
