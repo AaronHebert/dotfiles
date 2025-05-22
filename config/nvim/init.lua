@@ -30,8 +30,6 @@ opt.fillchars = {eob = " "}
 opt.mouse = ""
 opt.tabstop = 2
 opt.softtabstop = 0
-opt.smarttab = true
-opt.shiftwidth = 2
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -49,6 +47,12 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
+
+-- Remove trailing whitespaces on save
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = { "*" }, -- Apply to all file types
+  command = [[%s/\s\+$//e]],
+})
 
 -- Leader
 vim.g.mapleader = "\\"
