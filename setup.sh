@@ -20,8 +20,8 @@ ln -sf $PWD/.gemrc ~/.gemrc
 ln -sf $PWD/.hushlogin ~/.hushlogin
 ln -sf $PWD/.irbrc ~/.irbrc
 ln -sf $PWD/.tmux.conf ~/.tmux.conf
-
 ln -sf $PWD/config/nvim ~/.config/nvim
+
 
 #### Home setup
 mkdir -p ~/.secrets/rails_credentials

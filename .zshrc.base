@@ -66,6 +66,27 @@ function bundle_v() {
   echo "---Ran bundler with version ${BUNDLEVERSION}---"
 }
 
+function serv() {
+	local action="$1"
+
+  if [ "$action" = "start" ]; then
+    echo "Opening Tunnel to ted-services.local ..."
+    ssh -M -S ~/.ssh/localstack.sock -f -N -T -L 4566:127.0.0.1:4566 ahebert@ted-services.local
+		ssh -M -S ~/.ssh/mysql.sock -f -N -T -L 3306:127.0.0.1:3306 ahebert@ted-services.local
+  elif [ "$action" = "stop" ]; then
+    echo "Stopping tunnel to ted-services.local ..."
+  	ssh -S ~/.ssh/localstack.sock -O exit ahebert@ted-services.local
+  	ssh -S ~/.ssh/mysql.sock -O exit ahebert@ted-services.local
+	elif [ "$action" = "status" ]; then
+		echo "Status of tunnel to ted-services.local ..."
+		ssh -S ~/.ssh/localstack.sock -O check ahebert@ted-services.local
+		ssh -S ~/.ssh/mysql.sock -O check ahebert@ted-services.local
+	else
+    echo "Invalid action: '$action'."
+    echo "Usage: run_command [start|stop]"
+  fi
+}
+
 ### Aliases
 alias l="eza -ablh --group-directories-first --no-git"
 alias be="bundle_v exec"
@@ -77,7 +98,6 @@ alias kc="kubectl"
 alias lzd="lazydocker"
 alias qpatch="git add --all && git commit -m fix && git rebase -i HEAD~2"
 alias rm="rm -I" # you never know…
-alias startssh="eval `ssh-agent -s`"
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias vim="nvim"
 alias ww="vim -c VimwikiIndex"
