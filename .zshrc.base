@@ -66,41 +66,6 @@ function bundle_v() {
   echo "---Ran bundler with version ${BUNDLEVERSION}---"
 }
 
-function tunnel() {
-	local service="$1"
-	local action="$2"
-
-  if [ "$service" = "mysql" ]; then
-		if [ "$action" = "up" ]; then
-    	echo "Opening tunnel to 3306 on $LAB_ADDR..."
-    	ssh -M -S ~/.ssh/mysql.sock -f -N -T -L 3306:127.0.0.1:3306 $LAB_ADDR
-		fi
-
-		if [ "$action" = "down" ]; then
-    	echo "Stopping tunnel to 3306 on $LAB_ADDR..."
-  		ssh -S ~/.ssh/mysql.sock -O exit $LAB_ADDR
-		fi
-	fi
-
-  if [ "$service" = "localstack" ]; then
-		if [ "$action" = "up" ]; then
-    	echo "Opening tunnel to 4566 on $LAB_ADDR..."
-    	ssh -M -S ~/.ssh/localstack.sock -f -N -T -L 4566:127.0.0.1:4566 $LAB_ADDR
-		fi
-
-		if [ "$action" = "down" ]; then
-    	echo "Stopping tunnel to 4566 on $LAB_ADDR..."
-  		ssh -S ~/.ssh/localstack.sock -O exit $LAB_ADDR
-		fi
-	fi
-
-	if [ "$service" = "status" ]; then
-		echo "Status of tunnel to $LAB_ADDR ..."
-		ssh -S ~/.ssh/localstack.sock -O check $LAB_ADDR
-		ssh -S ~/.ssh/mysql.sock -O check $LAB_ADDR
-  fi
-}
-
 ### Aliases
 alias l="eza -ablh --group-directories-first --no-git"
 alias be="bundle_v exec"
