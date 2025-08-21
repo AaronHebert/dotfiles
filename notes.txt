@@ -10,6 +10,15 @@ GPG Keychain (gpgtools.org)
 	* `killall gpg-agent`
 	* Import pub/sec
 
+Docker context for remote services
+	* Update ~/.ssh/config
+	* Add `PermitUserEnvironment yes` to /etc/ssh/sshd_config on server
+	* Add ~/.ssh/environment to include
+		PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin/<HOMEBREW_OR_DOCKER_PATH>
+	* Restart sshd, sudo launchctl stop com.openssh.sshd; \
+		sudo launchctl start com.openssh.sshd
+	* Add the context settings to docker
+
 Remove Apple Intelligence Models
 	1. Disable Apple Intelligence in System Settings.
 	2. Start up into Recovery Mode.
