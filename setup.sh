@@ -25,8 +25,8 @@ ln -sf $PWD/config/nvim ~/.config/nvim
 
 #### Home setup
 mkdir -p ~/.secrets/rails_credentials
-mkdir ~/.vimwiki
-
+mkdir -p ~/.vimwiki
+mkdir -p ~/.ssh
 
 #### nvm
 #mkdir -p ~/.nvm
@@ -35,3 +35,7 @@ mkdir ~/.vimwiki
 
 #### tpm (tmux plugin manager) - in tmux, prefix + I to install
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+
+#### Rubbish
+sudo defaults write com.apple.LaunchServices LSQuarantine -bool NO
