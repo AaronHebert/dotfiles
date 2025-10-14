@@ -11,7 +11,6 @@ brew 'fd'
 brew 'fzf'
 brew 'ghostty'
 brew 'git'
-brew 'mutagen'
 brew 'neovim'
 brew 'pure'
 brew 'rbenv'
@@ -22,5 +21,4 @@ brew 'zoxide'
 brew 'zsh'
 
 # casks
-tap 'dbeaver-community'
 brew 'dbeaver-community'
