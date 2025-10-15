@@ -242,7 +242,10 @@ user_pref("browser.tabs.groups.smart.enabled", false);
 user_pref("browser.tabs.groups.smart.userEnabled", false);
 user_pref("pdfjs.enableAltTextModelDownload", false);
 user_pref("pdfjs.enableGuessAltText", false);
-
+user_pref("browser.tabs.groups.enabled", false);
+user_pref("browser.tabs.hoverPreview.showThumbnails", false);
+user_pref("browser.tabs.hoverPreview.enabled", false);
+user_pref("browser.tabs.min_inactive_duration_before_unload",	300000);
 // user_pref("", false);
 
 /****************************************************************************
