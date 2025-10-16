@@ -1,10 +1,10 @@
 ### My base config with common setup appropriate for both home & work.
 
 ### PATH
-export PATH="$PATH:$HOME/bin"
-export PATH="$PATH:/usr/local/bin"
-export PATH="$PATH:/bin"
 export PATH="$PATH:/opt/homebrew/bin/"
+export PATH="$PATH:/usr/local/bin"
+export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:/bin"
 
 ### Sensitive ENVs (keys, passwords, &c.), source all *.env from ~/.secrets
 ### Load this early to avoid overwriting values defined in the main .zshrc
