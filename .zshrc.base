@@ -21,7 +21,6 @@ done
 function addkeys() {
   arr=$__SSH_KEYS_TO_LOAD
 	for val in "${arr[@]}"; do
-		echo "-----------${arr[0]}"
 		/usr/bin/ssh-add --apple-use-keychain ~/.ssh/"$val" || {
 			echo "Failed to add ssh key: $val"
 		}
