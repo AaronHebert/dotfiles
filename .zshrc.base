@@ -6,6 +6,9 @@ export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:/bin"
 
+### Add to child .zshrc
+export __SSH_KEYS_TO_LOAD=()
+
 ### Sensitive ENVs (keys, passwords, &c.), source all *.env from ~/.secrets
 ### Load this early to avoid overwriting values defined in the main .zshrc
 for file in ~/.secrets/*.env(DN); do
@@ -16,17 +19,15 @@ done
 
 ### Add defined ssh keys to agent
 function addkeys() {
-  arr=("key_1" "key_2", "...")
-  if [[ $__SSH_KEYS_LOADED != "true" ]]; then
-	  for val in "${arr[@]}"; do
-		  ssh-add --apple-use-keychain ~/.ssh/"$val" || {
-			  echo "Failed to add ssh key: $val"
-		  }
-	  done
+  arr=$__SSH_KEYS_TO_LOAD
+	for val in "${arr[@]}"; do
+		echo "-----------${arr[0]}"
+		/usr/bin/ssh-add --apple-use-keychain ~/.ssh/"$val" || {
+			echo "Failed to add ssh key: $val"
+		}
+	done
 
-	  echo "-– ssh keys loaded!"
-	  export __SSH_KEYS_LOADED="true"
-	fi
+	echo "-– ssh keys loaded!"
 }
 
 ### Exports
