@@ -78,5 +78,6 @@ alias lzd="lazydocker"
 alias qpatch="git add --all && git commit -m fix && git rebase -i HEAD~2"
 alias rm="rm -I" # you never know…
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+alias unlocksec="sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain localhost.crt"
 alias vim="nvim"
 alias ww="vim -c VimwikiIndex"
