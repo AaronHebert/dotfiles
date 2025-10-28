@@ -19,8 +19,7 @@ done
 
 ### Add defined ssh keys to agent
 function addkeys() {
-  arr=$__SSH_KEYS_TO_LOAD
-	for val in "${arr[@]}"; do
+	for val in "${__SSH_KEYS_TO_LOAD[@]}"; do
 		/usr/bin/ssh-add --apple-use-keychain ~/.ssh/"$val" || {
 			echo "Failed to add ssh key: $val"
 		}
