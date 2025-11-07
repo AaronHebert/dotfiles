@@ -37,5 +37,29 @@ mkdir -p ~/.ssh
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 
-#### Rubbish
+#### Rubbish macOS stuff
 sudo defaults write com.apple.LaunchServices LSQuarantine -bool NO
+defaults write -g NSAutoFillHeuristicsControllerEnabled -bool false
+
+#### Disable headless chrome
+mkdir -p ~/Library/LaunchAgents ;
+cat > ~/Library/LaunchAgents/local.setenv.chromeheadless.plist <<'PLIST'
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>                <string>local.setenv.chromeheadless</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/launchctl</string>
+    <string>setenv</string>
+    <string>CHROME_HEADLESS</string>
+    <string>1</string>
+  </array>
+  <key>RunAtLoad</key>            <true/>
+  <!-- KeepAlive not needed; this is a one-shot -->
+  <key>StandardOutPath</key>      <string>/tmp/local.setenv.chromeheadless.out</string>
+  <key>StandardErrorPath</key>    <string>/tmp/local.setenv.chromeheadless.err</string>
+</dict>
+</plist>
+PLIST
