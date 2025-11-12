@@ -3,3 +3,5 @@ font-size = 15
 font-family = "SauceCodePro Nerd Font Mono"
 keybind = alt+left=unbind
 keybind = alt+right=unbind
+window-padding-y = 10
+window-padding-balance = true
