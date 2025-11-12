@@ -5,3 +5,4 @@ keybind = alt+left=unbind
 keybind = alt+right=unbind
 window-padding-y = 10
 window-padding-balance = true
+mouse-hide-while-typing = true

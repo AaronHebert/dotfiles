@@ -49,10 +49,14 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Remove trailing whitespaces on save
+-- Remove trailing whitespace on save
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-  pattern = { "*" }, -- Apply to all file types
-  command = [[%s/\s\+$//e]],
+  pattern = { "*" }, -- all file types
+  callback = function()
+		vim.cmd [[%s/\s\+$//e]] -- trailing
+		vim.cmd [[:,$g/^\s*$/d _]] -- blank lines, end of file
+		vim.cmd [[norm! Go]] -- ensure one blank link, end of line
+	end,
 })
 
 -- Leader
@@ -73,3 +77,4 @@ require("lazy").setup("plugins")
 -- Show neo-tree on startup, because, again, it refuses to do so itself.
 vim.cmd("set noshowcmd")
 vim.cmd(":Neotree filesystem reveal left")
+
