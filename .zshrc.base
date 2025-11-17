@@ -65,14 +65,20 @@ function bundle_v() {
   echo "---Ran bundler with version ${BUNDLEVERSION}---"
 }
 
+function dc_restart() {
+	docker restart $(docker ps -a -q)
+}
+
+function idangle() {
+	docker rmi $(docker images -f "dangling=true" -q)
+}
+
 ### Aliases
 alias l="eza -ablh --group-directories-first --no-git"
 alias be="bundle_v exec"
 alias dc="docker compose"
-alias dc_restart="docker restart $(docker ps -a -q)"
 alias fixdns="sudo dscacheutil -flushcache; sudo killall -9 mDNSResponder; sudo killall -9 mDNSResponderHelper"
 alias iclean="docker container prune && docker image prune"
-alias idangle='docker rmi $(docker images -f "dangling=true" -q)'
 alias kc="kubectl"
 alias lzd="lazydocker"
 alias qpatch="git add --all && git commit -m fix && git rebase -i HEAD~2"
