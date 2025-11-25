@@ -21,3 +21,4 @@ brew 'zsh'
 
 # casks
 brew 'dbeaver-community'
+brew 'ghostty'
