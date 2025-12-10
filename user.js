@@ -242,10 +242,18 @@ user_pref("browser.tabs.groups.smart.enabled", false);
 user_pref("browser.tabs.groups.smart.userEnabled", false);
 user_pref("pdfjs.enableAltTextModelDownload", false);
 user_pref("pdfjs.enableGuessAltText", false);
-user_pref("browser.tabs.groups.enabled", false);
+
+// More recently added junk
+ser_pref("browser.tabs.groups.enabled", false);
 user_pref("browser.tabs.hoverPreview.showThumbnails", false);
 user_pref("browser.tabs.hoverPreview.enabled", false);
-// user_pref("", false);
+user_pref("browser.newtabpage.activity-stream.feeds.weatherfeed", false)
+user_pref("browser.newtabpage.activity-stream.system.showWeather", false)
+user_pref("browser.newtabpage.activity-stream.weather.locationSearchEnabled", false)
+use_pref("browser.newtabpage.activity-stream.weather.optInDisplayed", false)
+user_pref("browser.newtabpage.activity-stream.weather.staticData.enabled", false)
+user_pref("browser.preferences.experimental.hidden", true)
+
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
