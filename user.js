@@ -255,6 +255,10 @@ user_pref("browser.newtabpage.activity-stream.weather.staticData.enabled", false
 user_pref("browser.preferences.experimental.hidden", true);
 
 
+// Custom, manually copied from Fastfox
+user_pref("gfx.webrender.layer-compositor", true);
+
+
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
 ****************************************************************************/
