@@ -258,6 +258,8 @@ user_pref("browser.preferences.experimental.hidden", true);
 // Custom, manually copied from Fastfox
 user_pref("gfx.webrender.layer-compositor", true);
 
+// Misc.
+user_pref("browser.tabs.fadeOutUnloadedTabs", true");
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
