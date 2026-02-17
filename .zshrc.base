@@ -17,6 +17,23 @@ for file in ~/.secrets/*.env(DN); do
   fi
 done
 
+### SSH Agent — reuse existing or start one
+SSH_ENV="$HOME/.ssh/agent-env"
+
+function start_ssh_agent() {
+	ssh-agent -s > "$SSH_ENV"
+	chmod 600 "$SSH_ENV"
+	source "$SSH_ENV" > /dev/null
+}
+
+if [[ -f "$SSH_ENV" ]]; then
+	source "$SSH_ENV" > /dev/null
+	# Check if the agent is still alive
+	kill -0 "$SSH_AGENT_PID" 2>/dev/null || start_ssh_agent
+else
+	start_ssh_agent
+fi
+
 ### Add defined ssh keys to agent
 function addkeys() {
 	for val in "${__SSH_KEYS_TO_LOAD[@]}"; do
