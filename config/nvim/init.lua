@@ -75,3 +75,4 @@ require("lazy").setup("plugins")
 -- Show neo-tree on startup, because, again, it refuses to do so itself.
 vim.cmd("set noshowcmd")
 vim.cmd(":Neotree filesystem reveal left")
+vim.cmd(":set ignorecase")
