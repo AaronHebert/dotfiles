@@ -177,9 +177,7 @@ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("browser.compactmode.show", true);
 user_pref("browser.privateWindowSeparation.enabled", false); // WINDOWS
 
-/** AI ***/
-user_pref("browser.ml.enable", false);
-user_pref("browser.ml.chat.enabled", false);
+
 
 /** FULLSCREEN NOTICE ***/
 user_pref("full-screen-api.transition-duration.enter", "0 0");
@@ -230,16 +228,18 @@ user_pref("telemetry.fog.init_on_shutdown", false);
 user_pref("toolkit.telemetry.dap_enabled", false);
 
 
-// Disable AI garbage
-user_pref("browser.ml.enable", false);
+// AI
 user_pref("browser.ml.chat.enabled", false);
 user_pref("browser.ml.chat.menu", false);
 user_pref("browser.ml.chat.shortcuts", false);
 user_pref("browser.ml.chat.shortcuts.custom", false);
 user_pref("extensions.ml.enabled", false);
 user_pref("browser.ml.linkPreview.enabled", false);
+user_pref("browser.ml.enable", false);
+user_pref("browser.ai.control.default", "blocked");
 user_pref("browser.tabs.groups.smart.enabled", false);
 user_pref("browser.tabs.groups.smart.userEnabled", false);
+
 user_pref("pdfjs.enableAltTextModelDownload", false);
 user_pref("pdfjs.enableGuessAltText", false);
 
