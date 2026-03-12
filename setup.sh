@@ -22,6 +22,7 @@ ln -sf $PWD/.irbrc ~/.irbrc
 ln -sf $PWD/.tmux.conf ~/.tmux.conf
 ln -sf $PWD/config/nvim ~/.config/nvim
 ln -sf $PWD/config/ghostty ~/.config/ghostty
+ln -sf $PWD/.gitconfig ~/.gitconfig
 
 #### Home setup
 mkdir -p ~/.secrets/rails_credentials
