@@ -244,7 +244,7 @@ user_pref("pdfjs.enableAltTextModelDownload", false);
 user_pref("pdfjs.enableGuessAltText", false);
 
 // More recently added junk
-ser_pref("browser.tabs.groups.enabled", false);
+user_pref("browser.tabs.groups.enabled", false);
 user_pref("browser.tabs.hoverPreview.showThumbnails", false);
 user_pref("browser.tabs.hoverPreview.enabled", false);
 user_pref("browser.newtabpage.activity-stream.feeds.weatherfeed", false);
@@ -256,7 +256,8 @@ user_pref("browser.preferences.experimental.hidden", true);
 
 
 // Custom, manually copied from Fastfox
-user_pref("gfx.webrender.layer-compositor", true);
+// This broke something in 149 -- choppy scroll
+//user_pref("gfx.webrender.layer-compositor", false);
 
 // Misc.
 user_pref("browser.tabs.fadeOutUnloadedTabs", true");
