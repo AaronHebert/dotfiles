@@ -260,7 +260,7 @@ user_pref("browser.preferences.experimental.hidden", true);
 //user_pref("gfx.webrender.layer-compositor", false);
 
 // Misc.
-user_pref("browser.tabs.fadeOutUnloadedTabs", true");
+user_pref("browser.tabs.fadeOutUnloadedTabs", true);
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
@@ -273,8 +273,3 @@ user_pref("browser.tabs.fadeOutUnloadedTabs", true");
 /****************************************************************************
  * END: BETTERFOX                                                           *
 ****************************************************************************/
-
-
-
-
-

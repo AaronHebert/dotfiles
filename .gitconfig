@@ -12,7 +12,6 @@
 [delta]
 	dark = true
 	line-numbers = true
-	side-by-side = true
 	keep-plus-minus-markers = false
 	syntax-theme = gruvbox-dark
 	file-style = "#434C5E" bold
