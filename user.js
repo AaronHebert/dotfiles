@@ -261,6 +261,7 @@ user_pref("browser.preferences.experimental.hidden", true);
 
 // Misc.
 user_pref("browser.tabs.fadeOutUnloadedTabs", true);
+user_pref("browser.tabs.splitView.enabled", false);
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
