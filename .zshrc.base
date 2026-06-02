@@ -45,11 +45,16 @@ function addkeys() {
 	echo "-– ssh keys loaded!"
 }
 
-### Exports
+### Docker
 export COMPOSE_DOCKER_CLI_BUILD=0
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
 export DOCKER_BUILDKIT=0
+
+### Editor
 export EDITOR="nvim"
+
+### Security
+export HISTCONTROL=ignorespace
 
 ### Telemetry
 export APOLLO_TELEMETRY_DISABLED=true
