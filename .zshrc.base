@@ -54,7 +54,7 @@ export DOCKER_BUILDKIT=0
 export EDITOR="nvim"
 
 ### Security
-export HISTCONTROL=ignorespace
+HISTCONTROL=ignoreboth
 
 ### Telemetry
 export APOLLO_TELEMETRY_DISABLED=true
