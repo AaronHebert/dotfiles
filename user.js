@@ -155,6 +155,7 @@ user_pref("app.normandy.api_url", "");
 /** CRASH REPORTS ***/
 user_pref("breakpad.reportURL", "");
 user_pref("browser.tabs.crashReporting.sendReport", false);
+user_pref("browser.crashReports.unsubmittedCheck.enabled", false);
 
 /****************************************************************************
  * SECTION: PESKYFOX                                                        *
@@ -262,6 +263,8 @@ user_pref("browser.preferences.experimental.hidden", true);
 // Misc.
 user_pref("browser.tabs.fadeOutUnloadedTabs", true);
 user_pref("browser.tabs.splitView.enabled", false);
+user_pref("nimbus.rollouts.enabled", false);
+
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
