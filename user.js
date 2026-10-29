@@ -264,7 +264,7 @@ user_pref("browser.preferences.experimental.hidden", true);
 user_pref("browser.tabs.fadeOutUnloadedTabs", true);
 user_pref("browser.tabs.splitView.enabled", false);
 user_pref("nimbus.rollouts.enabled", false);
-
+user_pref("gfx.color_management.hdr", false);
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
