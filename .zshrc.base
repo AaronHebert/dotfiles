@@ -48,7 +48,7 @@ function addkeys() {
 ### Docker
 export COMPOSE_DOCKER_CLI_BUILD=0
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
-export DOCKER_BUILDKIT=0
+export DOCKER_BUILDKIT=1
 
 ### Editor
 export EDITOR="nvim"
@@ -79,7 +79,9 @@ prompt pure
 
 ### NVM
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
+nvm_default=($NVM_DIR/versions/node/v$(<$NVM_DIR/alias/default)*(nOn[1]))
+export PATH="$nvm_default/bin:$PATH"
 
 ### Explicitly run the bundler version defined in Gemfile.lock
 function bundle_v() {
