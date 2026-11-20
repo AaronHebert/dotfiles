@@ -265,6 +265,7 @@ user_pref("browser.tabs.fadeOutUnloadedTabs", true);
 user_pref("browser.tabs.splitView.enabled", false);
 user_pref("nimbus.rollouts.enabled", false);
 user_pref("gfx.color_management.hdr", false);
+user_pref("browser.mini-window.enabled", false);
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
