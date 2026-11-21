@@ -77,12 +77,6 @@ ZSH_THEME=""
 autoload -U promptinit; promptinit
 prompt pure
 
-### NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
-nvm_default=($NVM_DIR/versions/node/v$(<$NVM_DIR/alias/default)*(nOn[1]))
-export PATH="$nvm_default/bin:$PATH"
-
 ### Explicitly run the bundler version defined in Gemfile.lock
 function bundle_v() {
   BUNDLEVERSION=$(tail -n -1 Gemfile.lock | tr -d '[:space:]')
